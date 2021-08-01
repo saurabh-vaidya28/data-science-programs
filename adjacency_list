@@ -1,0 +1,16 @@
+#generate adjacency list
+from collections import defaultdict
+graph = defaultdict(list)
+print("No of edges and vertices:")
+v,e = map(int, input().split())
+
+for i in range (e):
+    u,v = map(str, input().split())
+    graph[u].append(v)
+    print(graph[u])
+    graph[v].append(u)
+    print(graph[v])
+    
+print("Adjeacency list of each vertex:")
+for v in graph:
+    print(v, graph[v])
